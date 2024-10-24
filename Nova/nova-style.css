@@ -1,23 +1,122 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
 
+:root {
+  --bg-color: #ececec80;
+  --border-color: #cf02da9f;
+  --text-color: #0d000e;
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 .bot-container {
-    height: 420px;
-    width: 350px;
-    background: #fff;
-    position: fixed;
-    bottom: 50px;
-    right: 20px;
-    box-shadow: inset -0.06px 7.00px 7.06px -0.88px rgba(0, 0, 0, 0.15),
-  inset 0.10px -10.50px 7.06px -0.88px rgba(0, 0, 0, 0.3),
-  -0.19px 21.00px 5.30px -2.65px rgba(0, 0, 0, 0.6);
-  
+  height: 450px;
+  width: 350px;
+  background: var(--bg-color);
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  border: none;
+  border-radius: 40px;
+  box-shadow: 0 12px 18px rgba(0, 0, 0, 0.4),
+    inset 0 -24px 36px rgba(0, 0, 0, 0.4),
+    inset 0 24px 36px rgba(255, 255, 255, 0.6);
 
+}
+
+.chat-header {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px 0px;
+  color: var(--text-color);
+  font-size: 1.5rem;
+}
+
+.chat-header .chat-title {
+  padding-left: 10px;
+}
+
+.chat-body {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+  padding: 8px 15px;
+  width: 90%;
+  border-radius: 20px;
+  background: #fffdfd;
+  box-shadow: 0px 0px 20px 1px rgba(0,0,0,0.8);
+  align-items: flex-end;
+}
+
+.chat-input {
+  height: 70px;
+  margin-left: 8%;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  border: none;
+  padding: 1rem;
+  border-radius: 1rem 0 0 1rem;
+  background: #ffffff;
+  box-shadow: 20px 20px 60px #c5c5c5,
+    -20px -20px 60px #ffffff;
+  transition: 0.3s;
+  width: 95%;
+}
+
+.input:focus {
+  outline-color: #e8e8e8;
+  background: #e8e8e8;
+  box-shadow: inset 20px 20px 60px #c5c5c5,
+    inset -20px -20px 60px #ffffff;
+  transition: 0.3s;
+}
+
+#text-input {
+  line-height: 30px;
+  padding: 8px 10px;
+  border: none;
+  outline: none;
+  caret-color: #0d000e;
+  font-size: 1rem;
+
+}
+
+.input-sec {
+  flex: 9;
+}
+
+.send {
+  flex: 1;
+  margin-right: 20px;
+  border-radius: 0 1rem 1rem 0;
+  background: #e8e8e8;
+  box-shadow: 20px 20px 60px #c5c5c5,
+    -20px -20px 60px #ffffff;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+
+.send:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5, 
+  inset -4px -4px 12px #ffffff;
+}
+
+.user-message{
+  padding: 8px;
+  background: var(--border-color);
+  color: #e8e8e8;
+  margin: 5px;
+  width: max-content;
+  border-radius: 10px 3px 10px 10px;
 }
